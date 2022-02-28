@@ -1,0 +1,283 @@
+// h3 starts at $base-font-size
+// heading grow from h3 to h1 by $heading-scale
+$base-font-size: 16px;
+$heading-scale: 12; // amount of px heading grow from h3 to h1
+
+@for $i from 1 through 3 {
+    h#{$i} {font-size: $base-font-size + $heading-scale * (3 - $i);font-family: 'Poppins', sans-serif;}}
+
+//font
+$sans-serif: 'Poppins', sans-serif;
+$fontcolor: #333;
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+$line-height-m: 1.6;
+$margin-10: 10px 0;
+
+//color
+$pramarycolor-blue: #00426a;
+$pramarycolor-burgundy: #6c1d45;
+$pramarycolor-grey: #d3d3d3;
+$secondarycolor-yellow: #f6a623;
+$secondarycolor-grey: #e5e1e6;
+
+// shadow
+$boxshadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+
+//image
+$width-100: 100%;
+
+
+
+
+// 
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: $sans-serif;
+    font-weight: $normal;
+    line-height: $line-height-m;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    font-family: $sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $fontcolor;
+}
+
+h1,
+h2{
+    font-weight: $bold;
+    line-height: $line-height-m;
+    margin: $margin-10;
+}
+
+
+
+
+p {
+    margin: $margin-10;
+}
+
+img {
+    width: $width-100;
+}
+
+button {
+    color: $fontcolor;
+    background-color: $secondarycolor-yellow;
+    padding: 12px 16px;
+    margin: 0 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    border: 1px solid $pramarycolor-burgundy;
+}
+
+// navbar
+
+.navbar {
+    background-color: $pramarycolor-blue;
+    color: #fff;
+    height: 70px;
+    margin: 0px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px #fff solid;
+}
+
+
+
+.navbar .flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__li {
+    margin-top: 6px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+// hero
+
+.hero {
+    height: 400px;
+    background-color: $pramarycolor-burgundy;
+    color: #fff;
+    position: relative;
+}
+
+.hero__img {
+    border-radius: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+// CTA
+
+.cta {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    margin-bottom: 150px;
+}
+
+
+
+.cta__card {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// Story
+
+.story__img {
+    background-size: cover;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    margin-left: auto;
+}
+
+.story {
+    margin-bottom: 100px;
+}
+
+
+// cardlist
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cards__item {
+    display: flex;
+    padding: 1rem;
+}
+
+@media (min-width:40rem) {
+    .cards__item { width: 50%;}
+}
+
+@media (min-width:56rem) {
+    .cards__item {
+        width: 33.3333333%;
+    }
+}
+
+.card {
+    background-color: $secondarycolor-grey;
+    border-radius: 0.25rem;
+    box-shadow: $boxshadow ;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 10px;
+    padding: 20px;
+    align-items: center;
+}
+.card__content {
+    padding: 1rem;
+}
+
+.card-h3 {   
+    color: $pramarycolor-burgundy;
+}
+
+.card__button {
+    margin-top: auto;
+}
+
+.cardlist__h2 {
+   text-align: center;
+}
+
+.cardlist {
+    margin-bottom: 100px;
+}
+
+
+// video story
+.videostory {
+    margin-bottom: 100px;
+}
+
+.story {
+    margin-top: 80px;
+}
+
+
+// footer
+
+footer {
+    background-color: $pramarycolor-blue !important;
+    color: #fff;
+    height: 90px;
+    margin:auto;
+}
+
+.grid-3 {
+grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-content {
+    margin: auto;
+}
+
+
+footer a {
+    color: #fff ;
+}
