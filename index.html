@@ -5,24 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="style.js"></script>
     <title>My midterm project</title>
 </head>
 <body>
- <!-- Navbar -->
- <div class="navbar">
-     <div class="container flex">
-         <h2>RedPanda.</h2>
-         <nav>
-             <ul>
-                 <li class="nav__li"><a href="index.html">Home</a></li>
-                 <li class="nav__li"><a href="about.html">About</a></li>
-                 <li class="nav__li"><a href="contact.html">Contact</a></li>
-                 <button><a href="https://www.w3schools.com//">Donate</a></button>
-             </ul> 
-         </nav>
-     </div>
- </div>
 
+    <!-- new navbar -->
+    <div class="navbar">
+        <div class="container flex">
+            <h2>RedPanda.</h2>
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <button><a href="https://www.w3schools.com//">Donate</a></button>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+
+        </div>
+    </div>
+    
+
+ 
  <!-- Hero -->
  <section class="hero">
      <div class="container grid">
@@ -72,21 +80,21 @@
         <ul class="cards">
             <li class="cards__item">
                 <div class="card">
-                    <h3 class="card-h3">Clean</h3>
+                    <h3 class="card-h3"><b>Clean</b></h3>
                     <p class="card_content">Red pandas lick themselves clean, just like house cats do.Eu tincidunt tortor cras fermentum odio ut lectus arcu bibendum. Pulvinar habitant morbi tristique senectus et netus et malesuada. Sem nulla pharetra diam sit amet. Ultrices vitae auctor eu augue.</p>
                     <button class="button card__button">Read More</button>
                 </div>
             </li>
             <li class="cards__item">
                 <div class="card">
-                    <h3 class="card-h3">Wrap</h3>
+                    <h3 class="card-h3"><b>Wrap</b></h3>
                     <p class="card_content">Red pandas wrap their tails around themselves to keep warm in their chilly habitat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     <button class="button card__button">Read More</button>
                 </div>
             </li>
             <li class="cards__item">
                 <div class="card">
-                    <h3 class="card-h3">Grow</h3>
+                    <h3 class="card-h3"><b>Grow</b></h3>
                     <p class="card_content">Newborns hardly have any fur on the bottoms of their feet. The fur grows as they get older.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <button class="button card__button">Read More</button>
                 </div>    
