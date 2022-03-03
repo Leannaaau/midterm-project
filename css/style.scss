@@ -179,12 +179,19 @@ button:hover {
 
 // hero
 
+
 .hero {
     height: 400px;
     background-color: $pramarycolor-burgundy;
     color: #fff;
     position: relative;
 }
+@media only screen and (max-width: 600px) {
+    .hero{
+        height: auto;
+        padding: 20px 0px;
+    }
+  }
 
 .hero__img {
     border-radius: 8px;
@@ -198,6 +205,14 @@ button:hover {
     align-items: center;
     height: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+    }
+  }
 
 // CTA
 
@@ -217,6 +232,18 @@ button:hover {
     transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 600px) {
+    .cta__card {
+        position: absolute;
+        top: 20%;
+        left: auto;
+        transform: none;
+    }
+  }
+
+.cta__button {
+    padding: 14px 16px;
+}
 
 // Story
 
@@ -279,6 +306,7 @@ button:hover {
 
 .card__button {
     margin-top: auto;
+    padding: 14px 16px;
 }
 
 .cardlist__h2 {
